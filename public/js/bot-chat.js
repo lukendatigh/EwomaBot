@@ -15,7 +15,7 @@ const botMessage = (chat) => {
 
   window.addEventListener('load', (event) => {
     setTimeout(() => {
-      botMessage('hello, i am Convid Verify')
+      botMessage('hello, i am Covid Verify')
     }, 100);
     setTimeout(() => {
       botMessage('you can ask me anything about Corona virus and i will be sure to help out')
