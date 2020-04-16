@@ -8,14 +8,24 @@ const socketTrigger = () => {
         console.log(JSON.parse(data))
         const info = JSON.parse(data);
         if(info.status == 200){
-            const botSpeech = info['chat-info'].result.fulfillment.speech;
-            botMessage(botSpeech)
+            const botMessages = info['chat-info'].result.fulfillment.messages;
+            // botMessage(botMessages)
+            botMessages.forEach((element, i) => {
+                if(i == 0) {
+                    botMessage(element.speech)
+                }else {
+                    setTimeout(() => {
+                        botMessage(element.speech)
+                    }, 2000);
+                }
+            });
         }
 
     });
 
     const sendChat = (e) => {
         e.preventDefault(); 
+        console.log(e)
         
         let msg = document.querySelector('#MSG'); //Get the message input
         if ($.trim(msg) == '') {
