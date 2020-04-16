@@ -5,7 +5,13 @@ const format = '@$%().,/!*1234567890abcdefghijklmnopqrstuvwxyz';
 const socketTrigger = () => {
 
     socket.on('bot-chat', function(data){
-       console.log(JSON.parse(data))
+        console.log(JSON.parse(data))
+        const info = JSON.parse(data);
+        if(info.status == 200){
+            const botSpeech = info['chat-info'].result.fulfillment.speech;
+            botMessage(botSpeech)
+        }
+
     });
 
     const sendChat = (e) => {
@@ -16,13 +22,10 @@ const socketTrigger = () => {
             return false;
         }
         //Show user chat message to the DOM
-        function insertMessage(msg) {
-            $('<div class="message message-personal">' + msg + '</div>').appendTo($('.messages-content')).addClass('new');  
-          }
-        insertMessage(msg.value) 
+        $('<div class="message message-personal">' + msg.value + '</div>').appendTo($('.messages-content')).addClass('new');  
 
         socket.emit('bot_chat', { //Send to bot server
-            'device_id': localStorage.getItem('device_id'),
+           'device_id': localStorage.getItem('device_id'),
            'message': msg.value,
         });
         
