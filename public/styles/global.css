@@ -1,0 +1,82 @@
+body{
+  background: linear-gradient(135deg, #6C63FF, goldenrod);
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.scroller{
+  overflow-y: scroll;
+}
+.scroller::-webkit-scrollbar {
+  width: 4px;
+}
+.scroller::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+  display: none;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  color: black;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #6C63FF;
+}
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+.bold {
+  font-weight: bold;
+}
+.font-12px {
+  font-size: 12px;
+}
+.our-nav {
+  background: #6C63FF;
+  height: 12vh;
+}
+.online-chatbot {
+  height: 100%;
+  color: white;
+}
+.online-chatbot .chatbot-image {
+  height: 9vh;
+  width: 9vh;
+  border-radius: 50%;
+}
+.chatbot-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.our-nav ul {
+  color: white;
+}
+.our-nav ul a{
+  color: white !important;
+}
+.border-black {
+  border: 1px solid black;
+}
+.btn-brand {
+  color: white;
+  background: #6C63FF;
+}
+.avatar {
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.avatar img {
+  width: 100%;
+  height: auto;
+}

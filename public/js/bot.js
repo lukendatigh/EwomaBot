@@ -31,13 +31,28 @@ const socketTrigger = () => {
         if ($.trim(msg) == '') {
             return false;
         }
+        
         //Show user chat message to the DOM
-        $('<div class="message message-personal">' + msg.value + '</div>').appendTo($('.messages-content')).addClass('new');  
-
-        socket.emit('bot_chat', { //Send to bot server
-           'device_id': localStorage.getItem('device_id'),
-           'message': msg.value,
-        });
+        $(`<div class="col-12 single-chat-message-area">
+                <div class="single-chat user-messages mt-2">
+                    <p class="chat-content">
+                        ${msg.value}
+                    </p>
+                </div>
+            </div>
+        `).appendTo($('.chat-display'));  
+        var objDiv = document.getElementById("chat-display");
+                    objDiv.scrollTop = objDiv.scrollHeight;
+        
+        //Track sensitive question and use it with user
+        let valueInLowerCase = msg.value.toLowerCase();
+        let socketTrigger = reverseSpeechTest(valueInLowerCase);//Socket is trigger in here
+        if(socketTrigger == 'socket'){
+            socket.emit('bot_chat', { //Send to bot server
+                'device_id': localStorage.getItem('device_id'),
+                'message': msg.value,
+             });
+        }
         
         msg.value = '';
         return false;
