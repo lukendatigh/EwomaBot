@@ -1,5 +1,5 @@
 //const socket = io('https://convid19verify.herokuapp.com/');//Hold the url of the server
-const socket = io('https://convid19verify.herokuapp.com/');
+const socket = io('https://ewomaappapi.herokuapp.com/');
 const format = '@$%().,/!*1234567890abcdefghijklmnopqrstuvwxyz';
 
 const socketTrigger = () => {
