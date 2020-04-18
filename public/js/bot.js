@@ -8,9 +8,8 @@ const socketTrigger = () => {
       
         const info = JSON.parse(data);
         if(info.status == 200){
-            const botMessages = info['chat-info'].result.fulfillment.messages;
-
             if(info.device_id === localStorage.getItem('device_id')){
+                const botMessages = info['chat-info'].result.fulfillment.messages;
                 botMessages.forEach((element, i) => {
                     if(i == 0) {
                         botMessage(element.speech)
