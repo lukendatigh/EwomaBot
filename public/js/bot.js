@@ -5,20 +5,22 @@ const format = '@$%().,/!*1234567890abcdefghijklmnopqrstuvwxyz';
 const socketTrigger = () => {
 
     socket.on('bot-chat', function(data){
-        console.log(JSON.parse(data))
+      
         const info = JSON.parse(data);
         if(info.status == 200){
             const botMessages = info['chat-info'].result.fulfillment.messages;
-            // botMessage(botMessages)
-            botMessages.forEach((element, i) => {
-                if(i == 0) {
-                    botMessage(element.speech)
-                }else {
-                    setTimeout(() => {
+
+            if(info.device_id === localStorage.getItem('device_id')){
+                botMessages.forEach((element, i) => {
+                    if(i == 0) {
                         botMessage(element.speech)
-                    }, 2000);
-                }
-            });
+                    }else {
+                        setTimeout(() => {
+                            botMessage(element.speech)
+                        }, 2000);
+                    }
+                });
+            }
         }
 
     });
