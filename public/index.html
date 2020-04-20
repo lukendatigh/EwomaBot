@@ -37,7 +37,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse px-3" style="z-index: 1000; background: #6C63FF;" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse px-3" style="z-index: 1000; background: #6C63FF;"
+                    id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mr-4" style=" flex-direction: row;">
                         <span class="mt-2 mr-2">Share Ewoma:</span>
                         <li class="nav-item mx-2 active">
@@ -55,7 +56,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="col-12 border chat-area">
+            <div class="col-12 chat-area">
                 <div id="chat-display" class="col-12 mt-3 chat-display scroller">
                     <!--Message display Spot-->
                 </div>
@@ -69,7 +70,8 @@
                                 placeholder="Ask Ewoma anything relating to COVID-19">
                         </div>
                         <div class="button-send-con col-2 col-md-1">
-                            <button id="socket_check" class="btn btn-brand mt-3" style="padding: 7px 20px;border-radius: 25px;">
+                            <button id="socket_check" class="btn btn-brand mt-3"
+                                style="padding: 7px 20px;border-radius: 25px;">
                                 <i class="fas fa fa-paper-plane fa-lg"></i>
                             </button>
                         </div>
@@ -86,11 +88,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <!-- global.js will hold the activation of the service worker so it should be added to every page -->
+    <script src="js/global.js"></script>
     <script src="js/socket/socket.io.js"></script>
     <script src="js/bot.js"></script>
     <script src="js/bot-chat.js"></script>
     <script src="js/training.js"></script>
-    
 </body>
 
 </html>
