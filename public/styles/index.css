@@ -92,3 +92,11 @@
 .input-box {
     border-right: 1px solid black;
 }
+@media screen and (max-width: 500px) {
+    .bot-messages {
+        width: 90%;
+    }
+    .user-messages {
+        width: 90%;
+    }
+}

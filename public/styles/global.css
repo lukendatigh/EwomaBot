@@ -1,5 +1,6 @@
 .scroller{
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .scroller::-webkit-scrollbar {
   width: 4px;
