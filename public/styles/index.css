@@ -28,6 +28,9 @@
     .chat-content {
         padding: 0px;
     }
+    .chat-area {
+        background-size: cover;
+    }
 }
 .bot-messages {
     margin-left: 20px;
