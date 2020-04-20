@@ -1,12 +1,3 @@
-body{
-  background: linear-gradient(135deg, #6C63FF, goldenrod);
-  background-size: cover;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  line-height: 1.3;
-  overflow: hidden;
-}
-
 .scroller{
   overflow-y: scroll;
 }

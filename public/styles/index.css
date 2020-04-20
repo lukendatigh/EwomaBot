@@ -1,8 +1,10 @@
 .chat-area {
     height: 88vh;
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/BG.png');
-    background-size: cover;
+    background-size: 70%;
     background-position: center;
+    line-height: 1.3;
+    overflow: hidden;
 }
 .chat-display {
     height: 80%;
