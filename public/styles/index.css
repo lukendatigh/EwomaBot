@@ -14,9 +14,7 @@
     width: 100%;
     border: 1px solid transparent;
 }
-.single-chat {
-    
-}
+
 .chat-content {
     border-radius: 10px 0px 10px 0px;
     padding: 10px 15px;
@@ -98,5 +96,8 @@
     }
     .user-messages {
         width: 90%;
+    }
+    input::placeholder {
+        font-size: 5px;
     }
 }
