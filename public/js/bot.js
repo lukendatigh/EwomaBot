@@ -1,21 +1,24 @@
 //const socket = io('https://convid19verify.herokuapp.com/');//Hold the url of the server
+// const socket = io('http://localhost:5000/');
 const socket = io('https://ewomaappapi.herokuapp.com/');
-const format = '@$%().,/!*1234567890abcdefghijklmnopqrstuvwxyz';
+const format = '-1234567890abcdefghijklmnopqrstuvwxyz';
 
 const socketTrigger = () => {
 
     socket.on('bot-chat', function(data){
-      
         const info = JSON.parse(data);
+        console.log(info)
+        console.log(info.chat_info[0].queryResult.fulfillmentMessages, info.device_id)
+
         if(info.status == 200){
             if(info.device_id === localStorage.getItem('device_id')){
-                const botMessages = info['chat-info'].result.fulfillment.messages;
+                const botMessages = info.chat_info[0].queryResult.fulfillmentMessages;
                 botMessages.forEach((element, i) => {
                     if(i == 0) {
-                        botMessage(element.speech)
+                        botMessage(element.text.text)
                     }else {
                         setTimeout(() => {
-                            botMessage(element.speech)
+                            botMessage(element.text.text)
                         }, 2000);
                     }
                 });
@@ -69,7 +72,7 @@ const socketTrigger = () => {
     } 
 
     //Store a unique identification of this device
-    !localStorage.getItem('device_id') ? localStorage.setItem('device_id', randomStr(32, format)) : null;
+    !localStorage.getItem('device_id') ? localStorage.setItem('device_id', randomStr(36, format)) : null;
 
     //Trigger the sendchat function
     const chatForm = document.querySelector('#chatForm');
