@@ -42,10 +42,12 @@
     background: white;
 } */
 .bot-messages p {
+    overflow: hidden;
     border: .5px solid grey;
     color: #6C63FF;
     background: white;
     border-radius: 10px 0px 10px 0px;
+    text-align: justify;
     padding: 10px 15px;
     font-size: 13px;
     float: left;
@@ -67,13 +69,14 @@
     border-radius: 10px 0px 10px 0px;
     padding: 10px 15px;
     font-size: 13px;
+    text-align: justify;
     float: right;
 }
 .type-message-area {
     height: 15%;
 }
 .type-message-input{
-    height: 7vh;
+    height: 48.51px;
     border-radius: 25px;
     color: #787878;
     background: #DBD9FD;
@@ -90,6 +93,32 @@
 .input-box {
     border-right: 1px solid black;
 }
+
+.loadMoreBtn {
+    min-width: 100px;
+    margin-left: 18px;
+    margin-top: -25px;
+    float: left;
+}
+.loadMoreBtn span {
+    padding: 2px 45px 2px 45px;
+    margin: 1px;
+    color: white;
+    background: #6C63FF;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    cursor: pointer;
+    transition: 1s all ease;
+}
+.loadMoreBtn span:hover{
+    background: #e6e6e6;
+    color: #6C63FF;
+    border: 1px solid #6C63FF;
+    text-align: center;
+    transform: scale(1.002);
+}
 @media screen and (max-width: 500px) {
     .bot-messages {
         width: 90%;
@@ -99,5 +128,9 @@
     }
     input::placeholder {
         font-size: 5px;
+    }
+    .loadMoreBtn span {
+        padding: 2px 20px 2px 20px;
+        font-size: 10px;
     }
 }

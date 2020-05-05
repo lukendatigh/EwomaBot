@@ -8,7 +8,7 @@ const reverseSpeechTest = (valueInLowerCase) => {
 
         botMessage(reverseSpeech);
         setTimeout(() => {
-            botMessage(`I am Ewoma, You can ask me any question about Covid 19, i promise to be of help.`)
+            botMessage(`I am Ewoma, You can ask me any question about COVID-19, i promise to be of help.`)
         }, 2000);
         return 'non-socket';
              //prints: 123
@@ -19,7 +19,7 @@ const reverseSpeechTest = (valueInLowerCase) => {
 
         botMessage(reverseSpeech);
         setTimeout(() => {
-            botMessage(`I am Ewoma, You can ask me any question about Covid 19 virus, i promise to be of help.`)
+            botMessage(`I am Ewoma, You can ask me any question about COVID-19 virus, i promise to be of help.`)
         }, 2000);
         return 'non-socket';
              //prints: 123
@@ -30,7 +30,7 @@ const reverseSpeechTest = (valueInLowerCase) => {
 
         botMessage(reverseSpeech);
         setTimeout(() => {
-            botMessage(`I am Ewoma, You can ask me any question about Covid 19 virus, i promise to be of help.`)
+            botMessage(`I am Ewoma, You can ask me any question about COVID-19 virus, i promise to be of help.`)
         }, 2000);
         return 'non-socket';
              //prints: 123
@@ -41,14 +41,14 @@ const reverseSpeechTest = (valueInLowerCase) => {
 
         botMessage(reverseSpeech);
         setTimeout(() => {
-            botMessage(`I am Ewoma by the way, You can ask me any question about Covid 19 virus, i promise to be of help.`)
+            botMessage(`I am Ewoma by the way, You can ask me any question about COVID-19 virus, i promise to be of help.`)
         }, 2000);
         return 'non-socket';
              //prints: 123
     }else if(valueInLowerCase.startsWith('i am')) {
         var res =  valueInLowerCase.replace('i am', '');
         
-        reverseSpeech = `Hy ${res}, i am Ewoma, ask me any question about Covid 19 virus, i promise to be of help`;
+        reverseSpeech = `Hy ${res}, i am Ewoma, ask me any question about COVID-19 virus, i promise to be of help`;
 
         botMessage(reverseSpeech);
         return 'non-socket';
@@ -60,7 +60,7 @@ const reverseSpeechTest = (valueInLowerCase) => {
 
         botMessage(reverseSpeech);
         setTimeout(() => {
-            botMessage("Anyway i am Ewoma by name, You can ask relate any question about Covid 19 virus, i promise to be of help.")
+            botMessage("Anyway i am Ewoma by name, You can ask relate any question about COVID-19 virus, i promise to be of help.")
         }, 2000);
         return 'non-socket';
              //prints: 123
