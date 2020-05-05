@@ -14,9 +14,6 @@ const renderCountriesSummary = (height, len, unique, pass = 'default') => {
         botText += `
         <b>${i+1}. <span styl="font-size: 15px">COVID-19 Current Statistics For Country:</span></b><br>
         <b>${Country} (${CountryCode})</b> <img src="images/country-flags-16px/16/${CountryCode.toLowerCase()}_16.png"><br><br>
-        <span style="color: #0033cc;">NewConfirmed: ${NewConfirmed}</span><br>
-        <span style="color: tomato;">NewDeaths: ${NewDeaths}</span><br>
-        <span style="color: #009900;"> NewRecovered: ${NewRecovered}</span><br>
         <span style="color: #002080;">TotalConfirmed: ${TotalConfirmed}</span><br>
         <span style="color: red;"> TotalDeaths: ${TotalDeaths}</span><br>
         <span style="color: green;"> TotalRecovered: ${TotalRecovered}</span><br>
@@ -49,7 +46,7 @@ const renderCountriesSummary = (height, len, unique, pass = 'default') => {
     if(pass == 'default') {
         botMessage(botText, unique, loadMore, height)
         setTimeout(() => {
-            botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', randomStr(36, format))
+            botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', unique = `bot${randomStr(36, format)}`)
         }, 2000);
     }else {
         return {

@@ -63,10 +63,10 @@ socket.on('bot-chat', function(data){
             const botMessages = info.chat_info[0].queryResult.fulfillmentMessages;
             botMessages.forEach((element, i) => {
                 if(i == 0) {
-                    botMessage(element.text.text, randomStr(36, format))
+                    botMessage(element.text.text, unique = `bot${randomStr(36, format)}`)
                 }else {
                     setTimeout(() => {
-                        botMessage(element.text.text, randomStr(36, format))
+                        botMessage(element.text.text, unique = `bot${randomStr(36, format)}`)
                     }, 2000);
                 }
             });

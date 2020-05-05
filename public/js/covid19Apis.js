@@ -63,7 +63,7 @@ const covid19Statistics = (valueInLowerCase, msg) => {
         }else{
             const messageBox = document.querySelector("#MSG");
             messageBox.value = 'c19';
-            botMessage(`Oops! i noctice that you are not using the right COVID-19 statistic format,
+            botMessage(`Oops! i noctice that you are not using the right COVID-19 statistics format,
             please type <i style="color: green;">c19</i> to get more information.`);
         }
 
@@ -85,9 +85,9 @@ const covid19Statistics = (valueInLowerCase, msg) => {
         const defaultSpeech = defaultSpeechFunc();
         const messageBox = document.querySelector("#MSG");
         messageBox.value = 'c19-current-nigeria';
-        botMessage(defaultSpeech);
+        botMessage(defaultSpeech, unique = `bot${randomStr(36, format)}`);
         setTimeout(() => {
-            botMessage(`Press send button to test example for statistics in nigeria.`)
+            botMessage(`Press send button to test example for statistics in nigeria.`, unique = `bot${randomStr(36, format)}`)
         }, 2000);
         return 'non-socket';
     } else {
@@ -187,27 +187,27 @@ const formatChecker = (text) => {
     const formatCheckSlashEnding = /\/$/
     const formatCheckDashEnding = /-$/
     const messageBox = document.querySelector("#MSG");
-    const errorText = `Oops! i noctice that you are not using the right COVID-19 statistic format,
+    const errorText = `Oops! i noctice that you are not using the right COVID-19 statistics format,
     please type <i style="color: green;">c19</i> to get more information.`;
 
     if(!formatCheckText.test(text)) {
         messageBox.value = 'c19';
-        botMessage(errorText, randomStr(36, format));
+        botMessage(errorText, unique = `bot${randomStr(36, format)}`);
         return false;
     }
     if(formatCheckSlashEnding.test(text)) {
         messageBox.value = 'c19';
-        botMessage(errorText, randomStr(36, format));
+        botMessage(errorText, unique = `bot${randomStr(36, format)}`);
         return false;
     }
     if(formatCheckDashEnding.test(text)) {
         messageBox.value = 'c19';
-        botMessage(errorText, randomStr(36, format));
+        botMessage(errorText, unique = `bot${randomStr(36, format)}`);
         return false;
     }
     if(text.indexOf('-/') != -1 || text.indexOf('/-') != -1){
         messageBox.value = 'c19';
-        botMessage(errorText, randomStr(36, format));
+        botMessage(errorText, unique = `bot${randomStr(36, format)}`);
         return false;
     }
 }
