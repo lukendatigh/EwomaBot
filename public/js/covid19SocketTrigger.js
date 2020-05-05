@@ -24,5 +24,7 @@ const c19SummaryCountries = (stripSpaces) => {
 
 //Get summary from day one for a particular country
 const c19DayOne = (stripSpaces) => {
+    //Handle two format Request
+    // const stripSpaces.replace()
     console.log(stripSpaces)
 }

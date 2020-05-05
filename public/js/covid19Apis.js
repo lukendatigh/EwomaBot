@@ -27,7 +27,7 @@ const covid19Statistics = (valueInLowerCase, msg) => {
             }
             if(stripSpaces == 'c19-current-country') {
                 botMessage(`Oh yeah! that certainly is the correct format, 
-                but you doing it all wrong, you are using my format style, 
+                but you doing it all wrong, you are using my format guide, 
                 please replace country with adequate data, (eg. <b>c19-current-ghana</b>)`);
                 return false;
             }
@@ -47,7 +47,13 @@ const covid19Statistics = (valueInLowerCase, msg) => {
             }
             if(stripSpaces == 'c19-dayone-country') {
                 botMessage(`Oh yeah! that certainly is the correct format, 
-                but you doing it all wrong, you are using my format style, 
+                but you doing it all wrong, you are using my format guide, 
+                please replace country or status with adequate data!, (eg. <b>c19-dayone-ghana</b>)`);
+                return false;
+            }
+            if(stripSpaces == 'c19-dayone-country-status') {
+                botMessage(`Oh yeah! that certainly is the correct format, 
+                but you doing it all wrong, you are using my format guide, 
                 please replace country or status with adequate data!, (eg. <b>c19-dayone-ghana</b>)`);
                 return false;
             }
@@ -121,7 +127,7 @@ const defaultSpeechFunc = () => {
                 </span>
             </small>
             <br><br>
-            <b>3. To get current and summary case status for different affected countries:
+            <b>3. To get current and summary case status for different countries:
             <i class="fa fa-flag" aria-hidden="true"></i>
             </b><br>
             <small style="font-size: 12px;">
