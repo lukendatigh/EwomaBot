@@ -38,19 +38,16 @@ const botMessage = (chat, unique, loadMore = '', height = 'auto') => {
               })
               const loadAllTrigger = Array.from(document.querySelectorAll('.loadAllTrigger'));
               loadAllTrigger.map(x => {
-                  console.log(x)
                   x.addEventListener('click', (e) => loadAllFunc(e))
               })
             }else {
               const loadCloseTrigger = Array.from(document.querySelectorAll('.loadCloseTrigger'));
-              console.log(loadCloseTrigger)
               loadCloseTrigger.map(x => {
-                  console.log(x)
                   x.addEventListener('click', (e) => loadCloseFunc(e))
               })
             }
             
-    }, 1500);
+    }, 600);
   
   }
 
@@ -63,7 +60,7 @@ const botMessage = (chat, unique, loadMore = '', height = 'auto') => {
       botMessage(`What can I help you with today? (e.g. Does COVID-19 have a cure?, what are the preventive measures to prevent COVID-19?).`, randomStr(36, format))
     }, 2000);
     setTimeout(() => {
-      botMessage(`Type <i style="color: green;">stat-c19</i> to get current 
+      botMessage(`Type <i style="color: green;">c19</i> to get current 
       case status(confirmed, recovered, deaths) for different country.`, randomStr(36, format))
     }, 4000);
     

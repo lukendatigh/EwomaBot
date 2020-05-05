@@ -31,9 +31,7 @@ fetch('js/plugin/countryandflag.json')
   return response.json();
 }).then(data => {
   // Work with JSON data here
-  console.log(data);
   countryAndFlag = {...data};
-  console.log('hurray', countryAndFlag);
 }).catch(err => {
   console.log(err)
 });

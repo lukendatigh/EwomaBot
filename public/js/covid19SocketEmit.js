@@ -1,10 +1,6 @@
 //Summary Global
-    socket.on('stat-c19-summary-global', function(data){
+    socket.on('c19-summary-global', function(data){
         const info = JSON.parse(data);
-        console.log(info)
-        console.log(info.status)
-        console.log(info.global)
-
         if(info.status == 200){
             console.log(info.global)
             if(info.device_id === localStorage.getItem('device_id')){
@@ -24,17 +20,15 @@
                 `;
                 botMessage(botText)
                 setTimeout(() => {
-                    botMessage('Type <i style="color: green;">stat-c19</i> to see more statistic format')
+                    botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format')
                 }, 2000);
             }
         }
 
     });
 //Country Summary
-    socket.on('stat-c19-current-country', function(data){
+    socket.on('c19-current-country', function(data){
         const info = JSON.parse(data);
-        console.log(info)
-
         if(info.status == 200){
             if(info.device_id === localStorage.getItem('device_id')){
                 const {Country, CountryCode, 
@@ -55,7 +49,7 @@
                 `;
                 botMessage(botText, randomStr(36, format))
                 setTimeout(() => {
-                    botMessage('Type <i style="color: green;">stat-c19</i> to see more statistic format', randomStr(36, format))
+                    botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', randomStr(36, format))
                 }, 2000);
             }
         }
@@ -68,16 +62,13 @@
 
     });
 //All Affected Counrties
-socket.on('stat-c19-summary-countries', function(data){
+socket.on('c19-summary-countries', function(data){
     const info = JSON.parse(data);
-    console.log(info.countries)
 
     if(info.status == 200){
-        console.log(info.countries)
         if(info.device_id === localStorage.getItem('device_id')){
             //Put into an array to re render
             countriesArray.push(...info.countries);
-            
             renderCountriesSummary(height= '2050', len = 10, unique = `bot${randomStr(36, format)}`)
         }
     }

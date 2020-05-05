@@ -3,7 +3,7 @@ const renderCountriesSummary = (height, len, unique, pass = 'default') => {
     let botText = '';
     let loadMore = '';
     let loadMoreHeight;
-    console
+
     Number(len) >= 220 ? loadMoreHeight = 'auto' : loadMoreHeight =  Number(height) + 2050;
    
     countriesArray.map((x, i) => {
@@ -48,9 +48,8 @@ const renderCountriesSummary = (height, len, unique, pass = 'default') => {
     
     if(pass == 'default') {
         botMessage(botText, unique, loadMore, height)
-
         setTimeout(() => {
-            botMessage('Type <i style="color: green;">stat-c19</i> to see more statistic format', randomStr(36, format))
+            botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', randomStr(36, format))
         }, 2000);
     }else {
         return {
@@ -63,11 +62,9 @@ const renderCountriesSummary = (height, len, unique, pass = 'default') => {
 
 //This controls the load more countries and load all countries
 const loadMoreCountiresBtn = (e) => {
-    console.log(e)
     const id = e.target.dataset.id;
     const height = e.target.dataset.height;
     const len = e.target.dataset.len;
-    console.log(id, height, len);
     const chattext = document.querySelector(`#${id}`);
     let chatHeight = 'auto';
     //update the chat Dom
@@ -98,9 +95,7 @@ const loadMoreCountiresBtn = (e) => {
     
     }else {
         const loadCloseTrigger = Array.from(document.querySelectorAll('.loadCloseTrigger'));
-        console.log(loadCloseTrigger)
         loadCloseTrigger.map(x => {
-
             x.addEventListener('click', (e) => loadCloseFunc(e))
         })
     }
@@ -141,7 +136,6 @@ const loadAllFunc = (e) => {
         
     }else {
         const loadCloseTrigger = Array.from(document.querySelectorAll('.loadCloseTrigger'));
-        console.log(loadCloseTrigger)
         loadCloseTrigger.map(x => {
 
             x.addEventListener('click', (e) => loadCloseFunc(e))
@@ -151,7 +145,6 @@ const loadAllFunc = (e) => {
 }
 
 const loadCloseFunc = (e) => {
-    console.log(e)
     const id = e.target.dataset.id;
     const height = e.target.dataset.height;
     const len = e.target.dataset.len;
@@ -182,9 +175,7 @@ const loadCloseFunc = (e) => {
         
     }else {
         const loadCloseTrigger = Array.from(document.querySelectorAll('.loadCloseTrigger'));
-        console.log(loadCloseTrigger)
         loadCloseTrigger.map(x => {
-
             x.addEventListener('click', (e) => loadCloseFunc(e))
         })
     }
