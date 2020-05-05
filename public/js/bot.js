@@ -8,7 +8,7 @@ const socketTrigger = () => {
         console.log(e)
         
         let msg = document.querySelector('#MSG'); //Get the message input
-        if ($.trim(msg) == '') {
+        if ($.trim(msg.value) == '') {
             return false;
         }
         
