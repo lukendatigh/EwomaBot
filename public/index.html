@@ -19,6 +19,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+    <style>
+        .bg-parent {
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/BG.png');
+            background-size: 70%;
+            height: 100vh;
+            background-position: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -107,6 +115,27 @@
                                 </button>
                             </div>
                         </form>
+                        <script>
+                               function myFunction(x) {
+                                if (x.matches) { // If media query matches
+                                    document.querySelector('[data-header]').classList.add('container');
+                                    document.querySelector('[data-chat]').classList.add('container');
+                                    document.querySelector('[data-chatform]').classList.add('container');
+                                    document.querySelector('[data-chatform]').classList.remove('col-12', 'mx-auto');
+                                
+                                } else {
+                                    document.querySelector('[data-header]').classList.remove('container');
+                                    document.querySelector('[data-chat]').classList.remove('container');
+                                    document.querySelector('[data-chatform]').classList.remove('container');
+                                    document.querySelector('[data-chatform]').classList.add('col-12', 'mx-auto');
+                                    
+                                }
+                                }
+                                
+                                var x = window.matchMedia("(min-width: 1600px)")
+                                myFunction(x) // Call listener function at run time
+                                x.addListener(myFunction) // Attach listener function on state changes
+                        </script>
                     </div>
                 </div>
             </div>
@@ -151,29 +180,7 @@
     <script src="js/covid19SocketEmit.js"></script>
     <script src="js/manipulations.js"></script>
 </body>
-<script>
-    function myFunction(x) {
-      if (x.matches) { // If media query matches
-        document.querySelector('[data-header]').classList.add('container');
-        document.querySelector('[data-chat]').classList.add('container');
-        document.querySelector('[data-chatform]').classList.add('container');
-        document.querySelector('[data-chatform]').classList.remove('col-12', 'mx-auto');
-       
-      } else {
-        document.querySelector('[data-header]').classList.remove('container');
-        document.querySelector('[data-chat]').classList.remove('container');
-        document.querySelector('[data-chatform]').classList.remove('container');
-        document.querySelector('[data-chatform]').classList.add('col-12', 'mx-auto');
-        
-      }
-    }
-    
-    var x = window.matchMedia("(min-width: 1600px)")
-    myFunction(x) // Call listener function at run time
-    x.addListener(myFunction) // Attach listener function on state changes
-
-
-   
+<script>   
     let menuToggle = false;
     const toggleMenu = (e) => {
         console.log(e)
