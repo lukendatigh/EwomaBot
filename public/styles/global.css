@@ -84,15 +84,14 @@
 .button-send-con button {
         padding: 10px  13px 10px 13px; border-radius: 50%; margin-top: 13px;
     }
-@media(min-width: 992px) {
-        #chat-input-box {
-            flex: 0 0 95.666667%;
-            max-width: 95.666667%;
-        }
-        #chat-send-box {
-            max-width: 4.333333%;
-        }
- }
+#chat-input-box {
+    flex: 0 0 95.666667%;
+    max-width: 95.666667%;
+}
+#chat-send-box {
+    max-width: 4.333333%;
+}
+
  @media(max-width: 992px) {
         #chat-input-box {
             flex: 0 0 92.666667%;
