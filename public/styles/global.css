@@ -81,7 +81,6 @@
   width: 100%;
   height: auto;
 }
-<style>
 .button-send-con button {
         padding: 10px  13px 10px 13px; border-radius: 50%; margin-top: 13px;
     }
@@ -145,4 +144,3 @@
         padding: 8px 10px;
     }
 }
-</style>
