@@ -20,10 +20,32 @@ const socketTrigger = () => {
                 </div>
             </div>
         `).appendTo($('.chat-display'));  
+
         var objDiv = document.getElementById("chat-display");
                     objDiv.scrollTop = objDiv.scrollHeight;
         
         let valueInLowerCase = msg.value.toLowerCase();
+        console.log(valueInLowerCase)
+        
+        if($.trim(valueInLowerCase) === 'c19') {
+            localStorage.setItem('c19-status', true);
+            document.querySelector('[data-c19]').style.display = 'block';
+            document.querySelector('[data-mobileNav]').classList.add('animated', 'fadeIn')
+        }
+        if($.trim(valueInLowerCase) === '#') {
+            if(localStorage.getItem('c19-status')) {
+                localStorage.removeItem('c19-status');
+                document.querySelector('[data-c19]').style.display = 'none';
+                document.querySelector('[data-mobileNav]').classList.remove('animated', 'fadeIn')
+                botMessage(`Your are currently out of <span style="color: red;">c19</span> mode.`, unique = `bot${randomStr(36, format)}`)
+            }else {
+                botMessage(`Your are not currently in <span style="color: red;">c19</span> mode.`, unique = `bot${randomStr(36, format)}`)
+            }
+           
+            return;
+        }
+        
+
         //Track if statistic is needed 
         let statTrigger = covid19Statistics(valueInLowerCase, msg);
    

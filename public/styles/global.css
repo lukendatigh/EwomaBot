@@ -1,12 +1,19 @@
+/* .container-fluid{
+  padding-right: 25px;
+  padding-left: 25px;
+} */
+
 .scroller{
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #6c63ff grey;
 }
 .scroller::-webkit-scrollbar {
   width: 4px;
 }
 .scroller::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6); 
   border-radius: 10px;
   display: none;
 }
@@ -27,15 +34,17 @@
 }
 .our-nav {
   background: #6C63FF;
-  height: 12vh;
+  width:100%;
+  /* position: fixed; */
+  height: 80px;
 }
 .online-chatbot {
   height: 100%;
   color: white;
 }
 .online-chatbot .chatbot-image {
-  height: 9vh;
-  width: 9vh;
+  height: 62.27px;
+  width: 62.37px;
   border-radius: 50%;
 }
 .chatbot-image img {

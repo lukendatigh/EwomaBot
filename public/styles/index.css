@@ -1,13 +1,18 @@
-.chat-area {
-    height: 88vh;
+.bg-parent {
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/BG.png');
     background-size: 70%;
+    height: 100vh;
     background-position: center;
+}
+
+.chat-area {
+    height: 80vh;
     line-height: 1.3;
+    /* padding-top: 80px; */
     overflow: hidden;
 }
 .chat-display {
-    height: 80%;
+    height: 90%;
 }
 .single-chat-message-area {
     min-height: 7vh;
@@ -22,14 +27,65 @@
     max-width: 350px;
     word-wrap: break-word
 }
+.mobile-nav {
+   display: none;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    float: right;
+}
+.c19-nav {
+    position: absolute;
+    width: 100%;
+    background-color: #6C63FF;
+    border-top: 1px solid #e6e6e6;
+    left: 0;
+    padding: 0;
+    display: none;
+    z-index: 900;
+    text-align: center;
+    top: 80px;
+}
+.c19-nav img {
+    width: 30px;
+    height: 30px;
+  }
+
+@media screen and (max-width: 992px) {
+    .menu-icon {
+        display: block;
+    }
+    .mobile-nav {
+        position: absolute;
+        width: 100%;
+        background-color: #6C63FF;
+        border-top: 1px solid #e6e6e6;
+        left: 0;
+        padding: 0;
+        z-index: 900;
+        top: 80px;
+    }
+    .mobile-nav li {
+        display: inline-block;
+    }
+}
 @media screen and (max-width: 768px) {
     .chat-content {
         padding: 0px;
     }
-    .chat-area {
+    .bg-parent {
         background-size: cover;
     }
+    .c19-nav {
+      font-size: 12px;
+    }
+    .c19-nav img {
+        width: 25px;
+        height: 25px;
+      }
 }
+
 .bot-messages {
     margin-left: 20px;
     width: 100%;
@@ -73,10 +129,12 @@
     float: right;
 }
 .type-message-area {
-    height: 15%;
+    /* height: 15%; */
+    position: fixed;
+    bottom: 5px;
 }
 .type-message-input{
-    height: 48.51px;
+    height: 40px;
     border-radius: 25px;
     color: #787878;
     background: #DBD9FD;
@@ -133,4 +191,18 @@
         padding: 2px 20px 2px 20px;
         font-size: 10px;
     }
+    .mobile-nav {
+        font-size: 10px;
+    }
+    .chatbot-name-status h4 {
+        font-size: 17px;
+        margin-top: 10px !important;
+    }
+    .c19-nav {
+        text-align: left;
+        padding-left: 5px;
+        font-size: 8px;
+        padding: 5px;
+      }
+
 }

@@ -19,65 +19,182 @@
 </head>
 
 <body>
-    <div class="container-fluid nunito">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light our-nav col-12">
-                <div class="online-chatbot ml-lg-5">
-                    <div class="chatbot-image float-left">
-                        <img src="images/avatar.png" alt="">
-                    </div>
-                    <div class="chatbot-name-status ml-2 float-right">
-                        <h4 class="chatbot-name mt-2 mb-0 bold">Ewoma</h4>
-                        <span class="chatbot-status font-12px">Online</span>
-                    </div>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse px-3" style="z-index: 1000; background: #6C63FF;"
-                    id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto mr-4" style=" flex-direction: row;">
-                        <span class="mt-2 mr-2">Share Ewoma:</span>
-                        <li class="nav-item mx-2 active">
+    <section class="container-fluid nunito bg-parent">
+        <section class="row">
+            <section class="col-12 p-0 pl-lg-5 pr-lg-5 our-nav">
+                <div data-header>
+                    <nav class="navbar-expand-lg navbar-fixed-top navbar-light col-12 row" style="z-index: 9999;">
+                        <div class="online-chatbot col-10 col-md-6 col-lg-6 mt-2 ml-lg-4">
+                            <div class="chatbot-image float-left mr-1 ">
+                                <img src="images/avatar.png" alt="">
+                            </div>
+                            <div class="chatbot-name-status">
+                                <h4 class="chatbot-name mt-2 mb-0 bold">Ewoma</h4>
+                                <span class="chatbot-status font-12px">Online</span>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-6 col-lg-6 p-0 6 mt-4">
+                            <img id="menu-icon" class="menu-icon" src="images/menu.png" width="40" height="40" />
+                            <!-- <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button> -->
+                            
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto mr-4" style=" flex-direction: row;">
+                                    <span class="mt-2 mr-2">Share Ewoma:</span>
+                                    <li class="nav-item mx-2 active">
+                                        <a class="nav-link" href="#"><i class="k fab fa fa-lg fa-facebook-square"></i></a>
+                                    </li>
+                                    <li class="nav-item mx-2 active">
+                                        <a class="nav-link" href="#"><i class="fab fa fa-lg fa-twitter"></i></a>
+                                    </li>
+                                    <li class="nav-item mx-2 active">
+                                        <a class="nav-link" href="#"><i class="fab fa fa-lg fa-whatsapp"></i></a>
+                                    </li>
+                                    <li class="nav-item mx-2 active">
+                                        <a class="nav-link" href="#"><i class="fas fa fa-lg fa-link"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <ul data-mobileNav class="mobile-nav text-center">
+                        <span class="mt-2 mr-1 p-0 text-left">Share Ewoma:</span>
+                        <li class="nav-item mx-1 active">
                             <a class="nav-link" href="#"><i class="k fab fa fa-lg fa-facebook-square"></i></a>
                         </li>
-                        <li class="nav-item mx-2 active">
+                        <li class="nav-item mx-1 active">
                             <a class="nav-link" href="#"><i class="fab fa fa-lg fa-twitter"></i></a>
                         </li>
-                        <li class="nav-item mx-2 active">
+                        <li class="nav-item mx-1 active">
                             <a class="nav-link" href="#"><i class="fab fa fa-lg fa-whatsapp"></i></a>
                         </li>
-                        <li class="nav-item mx-2 active">
+                        <li class="nav-item mx-1 active">
                             <a class="nav-link" href="#"><i class="fas fa fa-lg fa-link"></i></a>
                         </li>
                     </ul>
+                    <ul data-c19 class="c19-nav">
+                        <span class="mt-2 mr-1 p-0 text-center">Hey Pal: You are currently in 
+                            <span style="color: rgb(235, 6, 6);">c19</span> mode, type
+                            <span style="color: rgb(235, 6, 6);">#</span> to opt out.
+                            <span id="read-more-c19" data-toggle="modal" data-target="#exampleModalScrollable" style="color: #e6e6e6; text-decoration: underline; cursor: pointer;"> Read More</span>
+                        </span>
+                        <img id="close-c19" src="images/closeicon.png" class="mr-0 mr-lg-5" style="
+                        text-align: right; position: absolute; right: 0; top: -3px; cursor: pointer;" close />
+                    </ul>
                 </div>
-            </nav>
-            <div class="col-12 chat-area">
-                <div id="chat-display" class="col-12 mt-3 p-0 chat-display scroller">
-                    <!--Message display Spot-->
-                </div>
-                <div class="col-12 mt-2 type-message-area px-0 row mx-0">
-                    <!-- <div class="col-10 input-box">
-
-                    </div> -->
-                    <form id="chatForm" class="col-12 row mx-0">
-                        <div class="form-group mb-0 p-0 col-9 col-md-11">
-                            <input id="MSG" type="text" class="form-control type-message-input mt-3 pl-1"
-                                placeholder="Ask Ewoma anything relating to COVID-19">
-                        </div>
-                        <div class="button-send-con col-2 col-md-1">
-                            <button id="socket_check" class="btn btn-brand mt-3"
-                                style="padding: 7px 20px; border-radius: 25px;">
-                                <i class="fas fa fa-paper-plane fa-lg"></i>
-                            </button>
-                        </div>
-                    </form>
+            </section>
+            
+            <div class="col-12 pl-lg-5 pr-lg-5">
+                <div data-chat class="chat-area">
+                    <div id="chat-display" class="col-12 mt-4 p-0 chat-display scroller">
+                        <!--Message display Spot-->
+                    </div>
+                    <div class="col-11 col-md-12 p-0 col-lg-11 mt-2 type-message-area row">
+                        <form data-chatform id="chatForm" class="chatForm row">
+                            <div id="chat-input-box" class="form-group mb-0 p-0">
+                                <input id="MSG" type="text" class="form-control type-message-input mt-3"
+                                    placeholder="Ask Ewoma anything relating to COVID-19">
+                            </div>
+                            <div id="chat-send-box" class="button-send-con pl-1">
+                                <button id="socket_check" class="btn btn-brand">
+                                    <i class="fas fa fa-paper-plane fa-lg"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <style>
+                            .button-send-con button {
+                                    padding: 10px  13px 10px 13px; border-radius: 50%; margin-top: 13px;
+                                }
+                            @media(min-width: 992px) {
+                                    #chat-input-box {
+                                        flex: 0 0 95.666667%;
+                                        max-width: 95.666667%;
+                                    }
+                                    #chat-send-box {
+                                        max-width: 4.333333%;
+                                    }
+                             }
+                             @media(max-width: 992px) {
+                                    #chat-input-box {
+                                        flex: 0 0 92.666667%;
+                                        max-width: 92.666667%;
+                                    }
+                                    #chat-send-box {
+                                        max-width: 7.333333%;
+                                    }
+                             }
+                            
+                        
+                       
+                            @media (max-width: 768px) {
+                                    #chat-input-box {
+                                        flex: 0 0 98%;
+                                        max-width: 98%;
+                                    }
+                                    #chat-send-box {
+                                        max-width: 2%;
+                                    }
+                                .button-send-con button {
+                                    padding:10px  13px 10px 13px; 
+                                    margin-top: 14.5px;
+                                }
+                                .type-message-input{
+                                    height: 40px;
+                                    border-radius: 25px;
+                                    color: #787878;
+                                    background: #DBD9FD;
+                                    font-size: 10px;
+                                }
+                                .type-message-input::placeholder {
+                                    color: #787878;
+                                    font-size: 10px;
+                                }
+                            }
+                            @media (max-width: 500px) {
+                                .button-send-con button {
+                                    margin-top: 15px;
+                                }
+                                #chat-input-box {
+                                        flex: 0 0 95%;
+                                        max-width: 95%;
+                                    }
+                                    #chat-send-box {
+                                        max-width: 5%;
+                                    }
+                                .button-send-con button {
+                                    padding: 8px 10px;
+                                }
+                            }
+                        </style>
+                    </div>
                 </div>
             </div>
+
+        </section>
+    </section>
+    <!-- Modal -->
+    <div style="z-index: 9999999999999999999999;" class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle" style="color: grey; text-align: center;">
+                About <span style="color: red;">c19</span> Mode</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body" style="color: grey;">
+             When you are in <span style="color: red;">c19</span> mode, your chats will be related to only to <span style="color: red;">c19</span> command only,
+             <span style="color: #6C63FF;">Ewoma</span> will communicate with you base on the format list provided in <span style="color: red;">c19</span> mode.<br><br>
+             To option out from <span style="color: red;">c19</span> mode, please type <span>#</span>
+            </div>
+            <div class="modal-footer">
+            <button style="background: #6C63FF; border-color: #6C63FF; font-weight: bold;" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -99,6 +216,70 @@
     <script src="js/covid19SocketEmit.js"></script>
     <script src="js/manipulations.js"></script>
 </body>
-</body>
+<script>
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+        document.querySelector('[data-header]').classList.add('container');
+        document.querySelector('[data-chat]').classList.add('container');
+        document.querySelector('[data-chatform]').classList.add('container');
+        document.querySelector('[data-chatform]').classList.remove('col-12', 'mx-auto');
+       
+      } else {
+        document.querySelector('[data-header]').classList.remove('container');
+        document.querySelector('[data-chat]').classList.remove('container');
+        document.querySelector('[data-chatform]').classList.remove('container');
+        document.querySelector('[data-chatform]').classList.add('col-12', 'mx-auto');
+        
+      }
+    }
+    
+    var x = window.matchMedia("(min-width: 1600px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
 
+
+   
+    let menuToggle = false;
+    const toggleMenu = (e) => {
+        console.log(e)
+        if(menuToggle == false) {
+            menuToggle = true;
+            document.querySelector('[data-mobileNav]').style.display = 'block';
+            document.querySelector('[data-mobileNav]').classList.remove('animated', 'fadeOutUp')
+            document.querySelector('[data-mobileNav]').classList.add('animated', 'fadeInDown')
+            return;
+        }
+        menuToggle = false;
+     
+        document.querySelector('[data-mobileNav]').classList.remove('animated', 'fadeInDown')
+        document.querySelector('[data-mobileNav]').classList.add('animated', 'fadeOutUp')
+        setTimeout(() => {
+               document.querySelector('[data-mobileNav]').style.display = 'none';
+        }, 500)
+        return
+    }
+
+    const toggleMenuBtn = document.querySelector('#menu-icon');
+    toggleMenuBtn.addEventListener('click', (e) => toggleMenu(e))
+    const PreventLaptopMenu = (v) => {
+        if(v.matches) {
+            document.querySelector('[data-mobileNav]').style.display = 'none';
+        }
+    }
+    var v = window.matchMedia("(min-width: 992px)")
+    PreventLaptopMenu(v) // Call listener function at run time
+    v.addListener(PreventLaptopMenu) // Attach listener function on state changes
+    if(localStorage.getItem('c19-status')) {
+        document.querySelector('[data-c19]').style.display = 'block';
+        document.querySelector('[data-mobileNav]').classList.add('animated', 'fadeIn')
+    }
+    document.querySelector('#close-c19').addEventListener('click', (event) => {
+        console.log(event)
+        document.querySelector('[data-c19]').style.display = 'none';
+        document.querySelector('[data-mobileNav]').classList.remove('animated', 'fadeIn')
+    });
+
+</script>
+<!-- 
+dns1.doveserver.com -->
 </html>

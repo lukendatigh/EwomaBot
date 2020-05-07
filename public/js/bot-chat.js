@@ -58,10 +58,10 @@ const botMessage = (chat, unique, loadMore = '', height = 'auto') => {
     }, 100);
     setTimeout(() => {
       botMessage(`What can I help you with today? (e.g. Does COVID-19 have a cure?, what are the preventive measures to prevent COVID-19?).`, randomStr(36, format))
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
-      botMessage(`Type <i style="color: green;">c19</i> to get current 
-      case status(confirmed, recovered, deaths) for different country.`, randomStr(36, format))
-    }, 4000);
+      botMessage(`And also you can type <i style="color: rgb(235, 6, 6);">c19</i> to get COVID-19 current 
+      case statistics for different country.`, randomStr(36, format))
+    }, 2000);
     
   })

@@ -1,14 +1,14 @@
 //get Summary Statistics Globally from server api request
 const c19SummaryGlobal = (stripSpaces) => {
-    socket.emit('c19-summary-global', { //Send to bot server
+    socket.emit('summary-global', { //Send to bot server
         'device_id': localStorage.getItem('device_id')
     });
 }
 
 //get Summary Statistics For Countries from server api request
 const c19CurrentCountry = (stripSpaces) => {
-    const rmDefaultText = stripSpaces.replace('c19-current-', '');
-    socket.emit('c19-current-country', { //Send to bot server
+    const rmDefaultText = stripSpaces.replace('current-', '');
+    socket.emit('current-country', { //Send to bot server
         'device_id': localStorage.getItem('device_id'),
         'message': rmDefaultText
     });
@@ -17,7 +17,7 @@ const c19CurrentCountry = (stripSpaces) => {
 //get Summary case Status for all affected country
 
 const c19SummaryCountries = (stripSpaces) => {
-    socket.emit('c19-summary-countries', { //Send to bot server
+    socket.emit('summary-countries', { //Send to bot server
         'device_id': localStorage.getItem('device_id')
     });
 }
@@ -25,13 +25,13 @@ const c19SummaryCountries = (stripSpaces) => {
 //Get summary from day one for a particular country
 const c19DayOne = (stripSpaces) => {
     //Handle two format Request
-    const rmDefaultText = stripSpaces.replace('c19-dayone-', '');
+    const rmDefaultText = stripSpaces.replace('dayone-', '');
     const toArray = rmDefaultText.split('-');
     if(toArray.length == 1) {
         //For Country
         console.log(toArray[0]);
         //Call the socket for the country format 
-        socket.emit('c19-dayone-country', { //Send to bot server
+        socket.emit('dayone-country', { //Send to bot server
             'device_id': localStorage.getItem('device_id'),
             'message': {
                 'country': toArray[0],
@@ -47,7 +47,7 @@ const c19DayOne = (stripSpaces) => {
             return false;
         }
         //Call a socket for the country and status format
-        socket.emit('c19-dayone-country-status', { //Send to bot server
+        socket.emit('dayone-country-status', { //Send to bot server
             'device_id': localStorage.getItem('device_id'),
             'message': {
                 'country': toArray[0],

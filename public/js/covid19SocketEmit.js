@@ -1,5 +1,5 @@
 //Summary Global
-    socket.on('c19-summary-global', function(data){
+    socket.on('summary-global', function(data){
         const info = JSON.parse(data);
         if(info.status == 200){
             console.log(info.global)
@@ -20,14 +20,14 @@
                 `;
                 botMessage(botText)
                 setTimeout(() => {
-                    botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', unique = `bot${randomStr(36, format)}`)
+                    botMessage('You can type <i style="color: red;">c19</i> to try more format!', unique = `bot${randomStr(36, format)}`)
                 }, 2000);
             }
         }
 
     });
 //Country Summary
-    socket.on('c19-current-country', function(data){
+    socket.on('current-country', function(data){
         const info = JSON.parse(data);
         if(info.status == 200){
             if(info.device_id === localStorage.getItem('device_id')){
@@ -45,7 +45,7 @@
                 `;
                 botMessage(botText, unique = `bot${randomStr(36, format)}`)
                 setTimeout(() => {
-                    botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', randomStr(36, format))
+                    botMessage('You can type <i style="color: red;">c19</i> to try more format!', randomStr(36, format))
                 }, 2000);
             }
         }
@@ -58,7 +58,7 @@
 
     });
 //All Affected Counrties
-socket.on('c19-summary-countries', function(data){
+socket.on('summary-countries', function(data){
     const info = JSON.parse(data);
 
     if(info.status == 200){
@@ -70,7 +70,7 @@ socket.on('c19-summary-countries', function(data){
     }
 });
 //From Dayone of Infection
-socket.on('c19-dayone-country', function(data){
+socket.on('dayone-country', function(data){
     const info = JSON.parse(data);
     let botText = '';
     if(info.status == 200){
@@ -107,7 +107,7 @@ socket.on('c19-dayone-country', function(data){
     }
 });
 //From Dayone of Infection and status
-socket.on('c19-dayone-country-status', function(data){
+socket.on('dayone-country-status', function(data){
     const info = JSON.parse(data);
     let botText = '';
     let color = 'grey';
