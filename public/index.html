@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="col-2 col-md-6 col-lg-6 p-0 6 mt-4">
-                            <img id="menu-icon" class="menu-icon" src="images/menu.png" width="40" height="40" />
+                            <img style="filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(185deg) brightness(106%) contrast(101%);" id="menu-icon" class="menu-icon" src="images/menu.png" width="40" height="40" />
                             <!-- <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </nav>
-                    <ul data-mobileNav class="mobile-nav text-center">
+                    <ul data-mobileNav class="mobile-nav text-center" style="z-index: 999999;">
                         <span class="mt-2 mr-1 p-0 text-left">Share Ewoma:</span>
                         <li class="nav-item mx-1 active">
                             <a class="nav-link" href="#"><i class="k fab fa fa-lg fa-facebook-square"></i></a>
@@ -94,8 +94,9 @@
                             <span style="color: rgb(235, 6, 6);">#</span> to opt out.
                             <span id="read-more-c19" data-toggle="modal" data-target="#exampleModalScrollable" style="color: #e6e6e6; text-decoration: underline; cursor: pointer;"> Read More</span>
                         </span>
-                        <img id="close-c19" src="images/closeicon.png" class="mr-0 mr-lg-5" style="
-                        text-align: right; position: absolute; right: 0; top: -3px; cursor: pointer;" close />
+                        <img id="close-c19" src="images/closeicon.png" class="mr-0 mr-lg-5" 
+                        style="filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(185deg) brightness(106%) contrast(101%);
+                        text-align: right; position: absolute; right: 5px; top: -3px; cursor: pointer;" close />
                     </ul>
                 </div>
             </section>
@@ -106,7 +107,7 @@
                         <!--Message display Spot-->
                     </div>
                     <div class="col-11 col-md-12 p-0 col-lg-11 mt-2 type-message-area row">
-                        <form data-chatform id="chatForm" class="chatForm row">
+                        <form data-chatform id="chatForm" class="chatForm row" style="z-index: 9999999999;">
                             <div id="chat-input-box" class="form-group mb-0 p-0">
                                 <input id="MSG" type="text" class="form-control type-message-input mt-3"
                                     placeholder="Ask Ewoma anything relating to COVID-19">
@@ -145,7 +146,7 @@
         </section>
     </section>
     <!-- Modal -->
-    <div style="z-index: 9999999999999999999999;" class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div style="z-index: 9999999999;" class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -156,8 +157,8 @@
             </button>
             </div>
             <div class="modal-body" style="color: grey;">
-             When you are in <span style="color: red;">c19</span> mode, your chats will be related to only to <span style="color: red;">c19</span> command only,
-             <span style="color: #6C63FF;">Ewoma</span> will communicate with you base on the format list provided in <span style="color: red;">c19</span> mode.<br><br>
+             When you are in <span style="color: red;">c19</span> mode, your chats will be base to <span style="color: red;">c19</span> command only,
+             <span style="color: #6C63FF;">Ewoma</span> will communicate with you base on the statistics format list provided in <span style="color: red;">c19</span> mode.<br><br>
              To option out from <span style="color: red;">c19</span> mode, please type <span style="color: red;;">#</span>
             </div>
             <div class="modal-footer">

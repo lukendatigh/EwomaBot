@@ -46,7 +46,7 @@ const renderCountriesSummary = (height, len, unique, pass = 'default') => {
     if(pass == 'default') {
         botMessage(botText, unique, loadMore, height)
         setTimeout(() => {
-            botMessage('Hey friend! you can type <i style="color: green;">c19</i> to try more format', unique = `bot${randomStr(36, format)}`)
+            botMessage('You can type <i style="color: green;">c19</i> for more statistics!', unique = `bot${randomStr(36, format)}`)
         }, 2000);
     }else {
         return {
